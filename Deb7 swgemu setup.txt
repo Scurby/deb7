@@ -1,6 +1,3 @@
-﻿
-Link to here... for testing
-https://www.dropbox.com/sh/ua033bat05omtv1/AAA7UTujpuOfnf3c4UpOyL_-a?dl=0
 
 Headless dropbox install
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
