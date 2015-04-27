@@ -18,16 +18,17 @@ https://www.debian.org/distrib/
 	Should work on any debian package distro
 ****************
 *TODO - make configurable username and pass - $USER and $PWD*
-username=swgemu  
-
-password=123456
-
-root pw=12345678
+	
+	username=swgemu  
+	password=123456
+	root pw=12345678
+	
 ****************
 Predefined software selections - Default selection
-(*)Debian Desktop
-(*)Print Server
-(*)Standard System Utilities
+
+	(*)Debian Desktop
+	(*)Print Server
+	(*)Standard System Utilities
 
 =============================
 # Run all CLI commands as sudo with user 'swgemu'. 
