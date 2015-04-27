@@ -1,2 +1,2 @@
 # deb7
-dev env setup 
+SWGEmu Development Environment setup for Debian 7 OS
