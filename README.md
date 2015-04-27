@@ -2,20 +2,24 @@
 SWGEmu Development Environment setup for Debian 7 OS
 
 ﻿VirtualBox, VMWare, or native install. Edit configuration as needed. I used:
-	VirtualBox
+	VirtualBox - https://www.virtualbox.org/wiki/Downloads
 	8g mem
 	32g virtual drive
 	max cores
 	bridged network
 
 =============================
-# Install Debian 7 (net install)64 bit (Should work on any debian package distro)
+# Install Debian 7 
+(net install) 64 bit 
+*Should work on any debian package distro*
 =============================
 https://www.debian.org/distrib/
 ****************
-# TODO - make configurable username and pass - $USER and $PWD #
+*TODO - make configurable username and pass - $USER and $PWD*
 username=swgemu  
+
 password=123456
+
 root pw=12345678
 ****************
 Predefined software selections - Default selection
