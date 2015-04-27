@@ -10,9 +10,7 @@ SWGEmu Development Environment setup for Debian 7 OS
 	max cores
 	bridged network
 
-=============================
 # Install Debian 7 
-
 https://www.debian.org/distrib/
 
 	(net install) 64 bit 
@@ -42,16 +40,17 @@ We give users access to the sudo command with the visudo command. If you have no
 	
 When you type this command, you will be taken into a text editor session with the file that defines sudo privileges pre-loaded. We will have to add our user to this file to grant our desired access rights.
 
-Find the part of the file that is labeled "User privilege specification". It should look something like this:
+Find the part of the file that is labeled "Allow members of group sudo to execute any command". It should look something like this:
 
-	# User privilege specification
-	root    ALL=(ALL:ALL) ALL
+	# Allow members of group sudo to execute any command
+	%sudo   ALL=(ALL:ALL) ALL
+
 	
-We give a user sudo privileges by copying the line beginning with "root" and pasting it after. We then change the user "root" on the new line to our new user, like this:
+We give a user sudo privileges by copying the line beginning with "%sudo" and pasting it after. We then change the user "%sudo" on the new line to our new user, like this:
 
-	# User privilege specification
-	root        ALL=(ALL:ALL) ALL
-	newuser    ALL=(ALL:ALL) ALL
+	# Allow members of group sudo to execute any command
+	%sudo   ALL=(ALL:ALL) ALL
+	%newuser   ALL=(ALL:ALL) ALL
 	
 We can now save the file and close it. By default, you can do that by typing Ctrl-X and then typing "Y" and pressing "Enter".
 ****************
@@ -73,10 +72,10 @@ Copy '/folder/files' into home folder
 	- /conf/ should be empty.
 
 	/home/setup - place eclipse tarball and Egit-prop tarball here
-=====================
+
 # Restart
 
-*TODO force restart???*
+	*TODO force restart???*
 
 RESTART!!!
 =====================
