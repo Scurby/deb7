@@ -33,7 +33,27 @@ Predefined software selections - Default selection
 Config sudoer as needed
 
 Run all CLI commands as sudo with user 'swgemu'. 
+
 https://www.digitalocean.com/community/tutorials/how-to-add-delete-and-grant-sudo-privileges-to-users-on-a-debian-vps
+
+We give users access to the sudo command with the visudo command. If you have not assigned additional privileges to any user yet, you will need to be logged in as root to access this command:
+
+	visudo
+	
+When you type this command, you will be taken into a text editor session with the file that defines sudo privileges pre-loaded. We will have to add our user to this file to grant our desired access rights.
+
+Find the part of the file that is labeled "User privilege specification". It should look something like this:
+
+	# User privilege specification
+	root    ALL=(ALL:ALL) ALL
+	
+We give a user sudo privileges by copying the line beginning with "root" and pasting it after. We then change the user "root" on the new line to our new user, like this:
+
+	# User privilege specification
+	root        ALL=(ALL:ALL) ALL
+	newuser    ALL=(ALL:ALL) ALL
+	
+We can now save the file and close it. By default, you can do that by typing Ctrl-X and then typing "Y" and pressing "Enter".
 ****************
 Run Updates
 
