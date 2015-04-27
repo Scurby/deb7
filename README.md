@@ -12,9 +12,10 @@ SWGEmu Development Environment setup for Debian 7 OS
 =============================
 # Install Debian 7 
 =============================
-(net install) 64 bit 
-Should work on any debian package distro
 https://www.debian.org/distrib/
+
+	(net install) 64 bit 
+	Should work on any debian package distro
 ****************
 *TODO - make configurable username and pass - $USER and $PWD*
 username=swgemu  
