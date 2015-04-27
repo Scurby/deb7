@@ -61,6 +61,7 @@ RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!
 =====================
 # Run setup scripts
 =====================
+**************************************************************************************
 The following shell scripts can be run from the command line. They are numbered in the order I use them.
 
 1. options - Installs Optional packages - 
@@ -73,18 +74,18 @@ The following shell scripts can be run from the command line. They are numbered 
 	"Lua-5.1 - Berkely DB 5.0 - MySQL Server and Workbench"
 
 3. start - Initial setup of development environment - 
-	# Choose editor
-	# Setup git user.* config
-	# Setup ssh key
-	# Register on gerrit
-	# Test Gerrit setup
-	# Clone repos and checkout a local branch of Core3 origin/unstable
-	# Symlinks (idlc)
-	# Engine library
-	# MySQL database checks
-	# Server configuration
-	# Tre files
-	# build config; run_dev;
+	- Choose editor
+	- Setup git user.* config
+	- Setup ssh key
+	- Register on gerrit
+	- Test Gerrit setup
+	- Clone repos and checkout a local branch of Core3 origin/unstable
+	- Symlinks (idlc)
+	- Engine library
+	- MySQL database checks
+	- Server configuration
+	- Tre files
+	- build config; run_dev;
 
 4. build - build always does make -k build
 	build config does 'make config' and 'make clean'
@@ -99,17 +100,11 @@ The following shell scripts can be run from the command line. They are numbered 
 # The following scripts are also useful...
 
 ack - Nice source grep tool (try: cd ~/workspace/MMOCoreORB/src; ack PlanetManager)
-
 myip -  display the ip of the VM and login port for quick configuration of the windows client
-
 updateip - Get ip address of local eth0 and update galaxy table as needed
-
 latest - do a quick git-stash, git-pull, and git-stash-apply so you can get to the latest code w/o loosing local work
-
 freeze - Save your devenv state so you can repeat the same tests over and over
-
 thaw - allow server to continue from previous state each time you run it
-
 installed - Package and version check sent to /home/*
 
 ***FIXME***
@@ -118,9 +113,7 @@ openfile {filename} - open file in eclipse
 ***TODO - incomplete***
 eclipse - install eclipse, import project and set git properties. 
 	(Requires Egit-properties.tar.gz in /home/setup/
-
 *******************************************************************************************
-
 -------
 Dropbox 
 -------
