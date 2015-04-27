@@ -17,12 +17,12 @@ https://www.debian.org/distrib/
 	(net install) 64 bit 
 	Should work on any debian package distro
 ****************
-*TODO - make configurable username and pass - $USER and $PWD*
 	
 	username=swgemu  
 	password=123456
 	root pw=12345678
-	
+
+*TODO - make configurable username and pass - $USER and $PWD*
 ****************
 Predefined software selections - Default selection
 
@@ -32,38 +32,38 @@ Predefined software selections - Default selection
 
 =======================
 # Config sudoer as needed
+
 Run all CLI commands as sudo with user 'swgemu'. 
 https://www.digitalocean.com/community/tutorials/how-to-add-delete-and-grant-sudo-privileges-to-users-on-a-debian-vps
 
 =======================
 # Run Updates
-=======================
+
 sudo apt-get update
 
 =======================
 # Import scripts # - do this in perms?
-=======================
 
 Copy '/folder/files' into home folder
-/home/bin/ - place all shell scripts here - set as read/write/executable
-TODO - Be sure that is executable:
-chmod +x /path/to/script - # perms
 
-/home/run/conf/ - place run_gdb in /home/run/
-                - /conf/ should be empty.
+	/home/bin/ - place all shell scripts here - set as read/write/executable
+	TODO - Be sure that is executable:
+	chmod +x /path/to/script - # perms
 
-/home/setup - place eclipse tarball and Egit-prop tarball here
+	/home/run/conf/ - place run_gdb in /home/run/
+	- /conf/ should be empty.
+
+	/home/setup - place eclipse tarball and Egit-prop tarball here
 
 =====================
 # Restart
-=====================
-* TODO force restart??? # perms *
+
+*TODO force restart??? # perms*
 RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!
 
 =====================
 # Run setup scripts
-=====================
-**************************************************************************************
+
 The following shell scripts can be run from the command line. They are numbered in the order I use them.
 
 1. options - Installs Optional packages - 
@@ -137,9 +137,9 @@ To start deamon in terminal
 
 
 ===============
-Eclipse- Not complete
+# Eclipse- Not complete
 http://eclipse.org/downloads/
-===============
+
 ---------------
 *Install Eclipse*
 ---------------
@@ -153,9 +153,7 @@ http://eclipse.org/downloads/packages/release/Kepler/SR2.
 ---------------
 ***Thanks Valkyra***
 
-	Close Eclipse
-	Download 
-http://www.eclipse.org/downloads/dow...PACKAGENAME.tar.gz to ~/Downloads
+Close Eclipse. Download http://www.eclipse.org/downloads/dow...PACKAGENAME.tar.gz to ~/Downloads
 
 Start a console session and type the below commands one after each other;
 
@@ -164,10 +162,10 @@ Start a console session and type the below commands one after each other;
 	mv ../eclipse ../eclipse-old
 	mv ./eclipse ../eclipse
 
-Now open eclipse again as normal and select workspace will come up, just choose OK
+Now open eclipse again as normal and select workspace will come up, just choose 'OK'
 
-Right click on the Project MMOCorb-Testing and select properties
-add the c++ include paths as shown in the linked image
+Right click on the Project MMOCorb-Testing and select 'properties'
+Add the c++ include paths as shown in the linked image
 
 http://i.imgur.com/N4rq7jb.png
 
