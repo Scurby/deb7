@@ -113,26 +113,24 @@ The following shell scripts can be run from the command line. They are numbered 
 **************************************************************************************
 # The following scripts are also useful...
 
-	ack - Nice source grep tool (try: cd ~/workspace/MMOCoreORB/src; ack PlanetManager)
+ack - Nice source grep tool (try: cd ~/workspace/MMOCoreORB/src; ack PlanetManager)
 
-	myip -  display the ip of the VM and login port for quick configuration of the windows client
+myip -  display the ip of the VM and login port for quick configuration of the windows client
 
-	updateip - Get ip address of local eth0 and update galaxy table as needed
+updateip - Get ip address of local eth0 and update galaxy table as needed
 
-	latest - do a quick git-stash, git-pull, and git-stash-apply so you can get to the latest code w/o loosing local work
+latest - do a quick git-stash, git-pull, and git-stash-apply so you can get to the latest code w/o loosing local work
 
-	freeze - Save your devenv state so you can repeat the same tests over and over
+freeze - Save your devenv state so you can repeat the same tests over and over
 
-	thaw - allow server to continue from previous state each time you run it
+thaw - allow server to continue from previous state each time you run it
 
-	installed - Package and version check sent to /home/*
+installed - Package and version check sent to /home/*
 
 
-*FIXME*
-	openfile {filename} - open file in eclipse
+openfile {filename} - open file in eclipse *FIXME*
 
-*TODO - incomplete*
-	eclipse - install eclipse, import project and set git properties. 
+eclipse - install eclipse, import project and set git properties. *FIXME*
 	(Requires Egit-properties.tar.gz in /home/setup/
 *******************************************************************************************
 -------
