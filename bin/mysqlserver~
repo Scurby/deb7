@@ -1,0 +1,51 @@
+#!/bin/bash
+#sudo if [[ ! "$(/usr/sbin/service mysql status)" =~ "start/running" ]]
+#then
+#    sudo /usr/sbin/service mysql start
+#fi
+#Be sure that is executable:
+
+#chmod +x /path/to/script
+
+
+
+
+#if  [[ ! "$(/usr/sbin/service mysql status)" =~ "start/running" ]]
+#then
+#    sudo service mysql start
+##    mysql -u root -p1234
+##    mysql CREATE USER 'swgemu'@'localhost' IDENTIFIED BY 'l';
+##    mysql GRANT ALL PRIVILEGES ON `swgemu` . * TO 'swgemu'@'localhost';
+##    mysql exit
+#fi
+
+  
+#EXPECTED_ARGS=3
+#E_BADARGS=65
+#MYSQL=`which mysql`
+#  
+#Q1="CREATE DATABASE IF NOT EXISTS $1;"
+#Q2="GRANT USAGE ON *.* TO $2@localhost IDENTIFIED BY '$3';"
+#Q3="GRANT ALL PRIVILEGES ON $1.* TO $2@localhost;"
+#Q4="FLUSH PRIVILEGES;"
+#SQL="${Q1}${Q2}${Q3}${Q4}"
+#  
+#if [ $# -ne $EXPECTED_ARGS ]
+#then
+#  echo "Usage: $0 dbname dbuser dbpass"
+#  exit $E_BADARGS
+#fi
+#  
+#$MYSQL -uroot -p -e "$SQL"
+#Following Brian's example, I've named the script createdb and moved it to the /usr/bin directory on my server, after applying executable permissions to it:
+
+#chmod 755 createdb
+#Creating a new database and user is now as simple as:
+createdb swgemu swgemu l
+#createdb <database> <user> <password>
+
+if yorn "MySQL setup complete. Run 'start' to setup ssh and pull repos."; then
+  logger -t start "start"
+  ~/bin/start
+  exit 0
+fi

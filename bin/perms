@@ -1,0 +1,84 @@
+#!/bin/bash
+#
+# perms - Sets file permissions for /home/bin/
+#
+
+##############################################################################
+# Common functions and setup
+##############################################################################
+yorn() {
+  echo -n -e "$@ Y\b"
+  read yorn
+  case $yorn in
+    [Nn]* ) return 1;;
+  esac
+  return 0
+}
+nory() {
+  echo -n -e "$@ N\b"
+  read yorn
+  case $yorn in
+    [Yy]* ) return 0;;
+  esac
+  return 1
+}
+
+logmsg() {
+  echo "${tc_smso}**${tc_rmso} $*"
+  logger -t start "$*"
+}
+
+logstep() {
+  let "step=$step + 1"
+  echo ${tc_smso}$(head -c $(tput cols) < /dev/zero | tr '\0' '*')${tc_rmso}
+  echo "${tc_smso}**${tc_rmso} STEP $step >> $*"
+  logger -t start "STEP $step >> $*"
+}
+
+step=0
+tc_smso=$(tput smso)
+tc_rmso=$(tput rmso)
+
+# TODO Add check for default browser
+# Edit browser as desired. Firefox commented out.
+export BROWSER=chromium
+
+if [ -x /usr/bin/chromium ]; then
+  BROWSER=/usr/bin/chromium
+fi
+
+####################
+# download files..
+#wget -i "https://www.dropbox.com/sh/441mev85h36duzb/AABqxQkv4VQrcCxI-LN09C2Pa?dl=0"
+####################
+logstep "Download files"
+if yorn "Would you like to download the setup files now??"; then
+   logmsg " Copy all folders/files to the /home/ folder "
+#   $BROWSER "https://www.dropbox.com/sh/441mev85h36duzb/AABqxQkv4VQrcCxI-LN09C2Pa?dl=0" > /tmp/browser.out 2>&1
+wget -i "https://www.dropbox.com/sh/441mev85h36duzb/AABqxQkv4VQrcCxI-LN09C2Pa?dl=0"
+    sleep 2
+fi
+
+####################
+# Set as executable..
+####################
+logstep "Set file perms"
+if yorn "Would you like to set /home/bin/ file permissions now??"; then
+  for i in admin build cleanup_for_publish createdb e eclipse first freeze ide installed latest myip myip_w openfile options perms run_dev start thaw updateip
+    do
+      logmsg " Setting executables ${i} ... "
+      chmod -v +x /home/swgemu/bin/${i}
+    done
+  else
+  logmsg " Edit this script as desired. " 
+fi
+
+####################
+#Restart
+####################
+logstep "Restart"
+if yorn "Would you like to restart now??"; then
+    sudo /sbin/reboot
+  else
+    exit 0
+fi

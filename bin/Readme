@@ -1,0 +1,62 @@
+The following bash scripts can be run from the command line. They are numbered in the order I use them.
+
+1. options - Installs Optional packages - 
+	"xclip terminator vim chromium quassel" -TODO fix dropbox install
+        
+2. first - Installs required packages and programs -  
+	"gcc, g++, git, gdb, automake, make, libreadline-gplv2-dev "
+	"libncurses5-dev, libneon27, libaprutil1-dev, libtool "
+	"openjdk-6-jre, openjdk-6-jre-headless, libgtest-dev, screen "
+	"Lua-5.1 - Berkely DB 5.0 - MySQL Server and Workbench"
+
+3. start - Initial setup of development environment - 
+	# Choose editor
+	# Setup git user.* config
+	# Setup ssh key
+	# Register on gerrit
+	# Test Gerrit setup
+	# Clone repos and checkout a local branch of Core3 origin/unstable
+	# Symlinks (idlc)
+	# Engine library
+	# MySQL database checks
+	# Server configuration
+	# Tre files
+	# build config; run_dev;
+
+4. build - build always does make -k build
+	build config does 'make config' and 'make clean'
+	build clean does 'make clean'
+
+5. run_dev - Build and run the development server and launch it under gdb on a 'screen'
+	***NOTE: run_dev uses gdb in batch mode and starts with the commands
+	in ~/run/run_gdb which you can change to your pleasing;
+	(breakpoints, dumps, settings etc.)
+
+####################################################################################
+
+UPDATE `swgemu`.`accounts` SET `admin_level`=15 WHERE `account_id`='1';
+
+The following scripts are also useful...
+
+ack - Nice source grep tool (try: cd ~/workspace/MMOCoreORB/src; ack PlanetManager)
+
+myip -  display the ip of the VM and login port for quick configuration of the windows client
+
+updateip - Get ip address of local eth0 and update galaxy table as needed
+
+latest - do a quick git-stash, git-pull, and git-stash-apply so you can get to the latest code w/o loosing local work
+
+freeze - Save your devenv state so you can repeat the same tests over and over
+
+thaw - allow server to continue from previous state each time you run it
+
+installed - Package and version check sent to /home/*
+
+*** FIXME
+openfile {filename} - open file in eclipse
+
+TODO - incomplete
+eclipse - install eclipse, import project and set git properties. 
+	(Requires Egit-properties.tar.gz in /home/setup/
+
+

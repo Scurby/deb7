@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# admin - Sets Acct with ID of 1 to Admin
+#
+# Author: Scurby <scurby@swgemu.com>
+#
+# Created: Apr 26 2015
+#
+
+mysql -p -e UPDATE `swgemu`.`accounts` SET `admin_level`=15 WHERE `account_id`='1';
