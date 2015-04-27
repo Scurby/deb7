@@ -30,10 +30,9 @@ Predefined software selections - Default selection
 	(*)Print Server
 	(*)Standard System Utilities
 
-=============================
-# Run all CLI commands as sudo with user 'swgemu'. 
-
-(Config sudoer as needed)  
+=======================
+# Config sudoer as needed
+Run all CLI commands as sudo with user 'swgemu'. 
 https://www.digitalocean.com/community/tutorials/how-to-add-delete-and-grant-sudo-privileges-to-users-on-a-debian-vps
 
 =======================
@@ -110,10 +109,10 @@ freeze - Save your devenv state so you can repeat the same tests over and over
 thaw - allow server to continue from previous state each time you run it
 installed - Package and version check sent to /home/*
 
-***FIXME***
+*FIXME*
 openfile {filename} - open file in eclipse
 
-***TODO - incomplete***
+*TODO - incomplete*
 eclipse - install eclipse, import project and set git properties. 
 	(Requires Egit-properties.tar.gz in /home/setup/
 *******************************************************************************************
@@ -122,7 +121,7 @@ Dropbox
 -------
 Option A. Installing Dropbox from source
 
-# TODO Fix this and place in 'options' script
+* TODO Fix this and place in 'options' script *
 Download the latest installer package from https://linux.dropbox.com/packages/
 Extract the tarball like so:
 tar xjf ./nautilus-dropbox-1.6.1.tar.bz2
@@ -153,23 +152,27 @@ http://eclipse.org/downloads/packages/release/Kepler/SR2.
 ***How to Upgrade Eclipse on the Development VM***
 ---------------
 ***Thanks Valkyra***
-Close Eclipse
-Download 
+
+	Close Eclipse
+	Download 
 http://www.eclipse.org/downloads/dow...PACKAGENAME.tar.gz to ~/Downloads
+
 Start a console session and type the below commands one after each other;
 
-cd Downloads
-tar -xvf eclipse-cpp-PACKAGENAME.tar.gz
-mv ../eclipse ../eclipse-old
-mv ./eclipse ../eclipse
+	cd Downloads
+	tar -xvf eclipse-cpp-PACKAGENAME.tar.gz
+	mv ../eclipse ../eclipse-old
+	mv ./eclipse ../eclipse
 
 Now open eclipse again as normal and select workspace will come up, just choose OK
 
 Right click on the Project MMOCorb-Testing and select properties
 add the c++ include paths as shown in the linked image
+
 http://i.imgur.com/N4rq7jb.png
 
 Then add the pre-processor macro as shown in
+
 http://i.imgur.com/k2CMtHM.jpg
 
 Click OK and then Apply
@@ -178,5 +181,4 @@ Once added, select the project again and right click, then index/rebuild (may ta
 
 Close Eclipse and then re-open it, Carry on working as normal but with the newer version
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-=================================================================================
+=====================================
