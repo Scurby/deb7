@@ -1,8 +1,9 @@
 # deb7
 SWGEmu Development Environment setup for Debian 7 OS
 
-﻿VirtualBox, VMWare, or native install. Edit configuration as needed. I used:
+﻿VirtualBox, VMWare, or native install. Edit as needed. 
 	VirtualBox - https://www.virtualbox.org/wiki/Downloads
+	I used:
 	
 	8g mem
 	32g virtual drive
@@ -17,7 +18,6 @@ https://www.debian.org/distrib/
 	(net install) 64 bit 
 	Should work on any debian package distro
 ****************
-	
 	username=swgemu  
 	password=123456
 	root pw=12345678
@@ -29,19 +29,15 @@ Predefined software selections - Default selection
 	(*)Debian Desktop
 	(*)Print Server
 	(*)Standard System Utilities
-
 ****************
 Config sudoer as needed
 
 Run all CLI commands as sudo with user 'swgemu'. 
 https://www.digitalocean.com/community/tutorials/how-to-add-delete-and-grant-sudo-privileges-to-users-on-a-debian-vps
-
 ****************
 Run Updates
-
 sudo apt-get update
 
-=======================
 # Import scripts # - do this in perms?
 
 Copy '/folder/files' into home folder
