@@ -67,16 +67,24 @@ RESTART!!!
 
 The following shell scripts can be run from the command line. They are numbered in the order I use them.
 
-1. options - Installs Optional packages - 
-	"xclip terminator vim chromium quassel" -# TODO fix dropbox install
-        
-2. first - Installs required packages and programs -  
-	"gcc, g++, git, gdb, automake, make, libreadline-gplv2-dev "
-	"libncurses5-dev, libneon27, libaprutil1-dev, libtool "
-	"openjdk-6-jre, openjdk-6-jre-headless, libgtest-dev, screen "
-	"Lua-5.1 - Berkely DB 5.0 - MySQL Server and Workbench"
+1. options - Installs Optional packages
 
-3. start - Initial setup of development environment - 
+	xclip 
+	terminator 
+	vim 
+	chromium 
+	quassel
+	TODO fix dropbox install
+        
+2. first - Installs required packages and programs
+
+	- gcc, g++, git, gdb, automake, make, libreadline-gplv2-dev
+	- libncurses5-dev, libneon27, libaprutil1-dev, libtool
+	- openjdk-6-jre, openjdk-6-jre-headless, libgtest-dev, screen
+	- Lua-5.1 - Berkely DB 5.0 - MySQL Server and Workbench
+
+3. start - Initial setup of development environment
+
 	- Choose editor
 	- Setup git user.* config
 	- Setup ssh key
@@ -91,10 +99,12 @@ The following shell scripts can be run from the command line. They are numbered 
 	- build config; run_dev;
 
 4. build - build always does make -k build
+
 	build config does 'make config' and 'make clean'
 	build clean does 'make clean'
 
 5. run_dev - Build and run the development server and launch it under gdb on a 'screen'
+
 	***NOTE: run_dev uses gdb in batch mode and starts with the commands
 	in ~/run/run_gdb which you can change to your pleasing;
 	(breakpoints, dumps, settings etc.)
