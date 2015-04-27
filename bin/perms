@@ -49,20 +49,29 @@ fi
 
 ####################
 # download files..
-#wget -i "https://www.dropbox.com/sh/441mev85h36duzb/AABqxQkv4VQrcCxI-LN09C2Pa?dl=0"
+git clone https://github.com/Scurby/deb7.git
 ####################
 logstep "Download files"
 if yorn "Would you like to download the setup files now??"; then
    logmsg " Copy all folders/files to the /home/ folder "
 #   $BROWSER "https://www.dropbox.com/sh/441mev85h36duzb/AABqxQkv4VQrcCxI-LN09C2Pa?dl=0" > /tmp/browser.out 2>&1
-wget -i "https://www.dropbox.com/sh/441mev85h36duzb/AABqxQkv4VQrcCxI-LN09C2Pa?dl=0"
+#wget -i "https://www.dropbox.com/sh/441mev85h36duzb/AABqxQkv4VQrcCxI-LN09C2Pa?dl=0"
+cd Downloads
+git clone https://github.com/Scurby/deb7.git
     sleep 2
 fi
+
+cp -i ~/Downloads/deb7/bin/* /home/swgemu/bin/
+cp -i ~/Downloads/deb7/setup/* /home/swgemu/setup/
+cp -i ~/Downloads/deb7/run/* /home/swgemu/run/
+# TODO - Move folders/files to Home folder
+
 
 ####################
 # Set as executable..
 ####################
 logstep "Set file perms"
+
 if yorn "Would you like to set /home/bin/ file permissions now??"; then
   for i in admin build cleanup_for_publish createdb e eclipse first freeze ide installed latest myip myip_w openfile options perms run_dev start thaw updateip
     do
