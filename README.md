@@ -36,9 +36,12 @@ Run all CLI commands as sudo with user 'swgemu'.
 https://www.digitalocean.com/community/tutorials/how-to-add-delete-and-grant-sudo-privileges-to-users-on-a-debian-vps
 ****************
 Run Updates
-sudo apt-get update
 
-# Import scripts # - do this in perms?
+	sudo apt-get update
+	
+=====================
+# Import scripts  
+	**do this in perms?**
 
 Copy '/folder/files' into home folder
 
@@ -50,14 +53,12 @@ Copy '/folder/files' into home folder
 	- /conf/ should be empty.
 
 	/home/setup - place eclipse tarball and Egit-prop tarball here
-
 =====================
 # Restart
 
-*TODO force restart??? # perms*
+*TODO force restart???*
 
 RESTART!!!
-
 =====================
 # Run setup scripts
 
