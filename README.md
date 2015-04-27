@@ -98,10 +98,11 @@ The following shell scripts can be run from the command line. They are numbered 
 	- Tre files
 	- build config; run_dev;
 
-4. build - build always does make -k build
+4. build - simple build script
 
-	build config does 'make config' and 'make clean'
-	build clean does 'make clean'
+	- build always does make -k build
+	- build config does 'make config' and 'make clean'
+	- build clean does 'make clean'
 
 5. run_dev - Build and run the development server and launch it under gdb on a 'screen'
 
@@ -113,12 +114,19 @@ The following shell scripts can be run from the command line. They are numbered 
 # The following scripts are also useful...
 
 ack - Nice source grep tool (try: cd ~/workspace/MMOCoreORB/src; ack PlanetManager)
+
 myip -  display the ip of the VM and login port for quick configuration of the windows client
+
 updateip - Get ip address of local eth0 and update galaxy table as needed
+
 latest - do a quick git-stash, git-pull, and git-stash-apply so you can get to the latest code w/o loosing local work
+
 freeze - Save your devenv state so you can repeat the same tests over and over
+
 thaw - allow server to continue from previous state each time you run it
+
 installed - Package and version check sent to /home/*
+
 
 *FIXME*
 openfile {filename} - open file in eclipse
