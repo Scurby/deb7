@@ -11,7 +11,7 @@ SWGEmu Development Environment setup for Debian 7 OS
 
 =============================
 # Install Debian 7 
-=============================
+
 https://www.debian.org/distrib/
 
 	(net install) 64 bit 
@@ -30,14 +30,14 @@ Predefined software selections - Default selection
 	(*)Print Server
 	(*)Standard System Utilities
 
-=======================
-# Config sudoer as needed
+****************
+Config sudoer as needed
 
 Run all CLI commands as sudo with user 'swgemu'. 
 https://www.digitalocean.com/community/tutorials/how-to-add-delete-and-grant-sudo-privileges-to-users-on-a-debian-vps
 
-=======================
-# Run Updates
+****************
+Run Updates
 
 sudo apt-get update
 
@@ -59,7 +59,8 @@ Copy '/folder/files' into home folder
 # Restart
 
 *TODO force restart??? # perms*
-RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!RESTART!!!
+
+RESTART!!!
 
 =====================
 # Run setup scripts
@@ -135,23 +136,22 @@ cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 To start deamon in terminal
 ~/.dropbox-dist/dropboxd
 
-
+**************************************************************************************
 ===============
 # Eclipse- Not complete
 http://eclipse.org/downloads/
-
 ---------------
 *Install Eclipse*
----------------
--Base install - CDT required
-http://eclipse.org/downloads/packages/release/Kepler/SR2.
-*Place tarball in /home/setup/ for 'ide' script. Edit ide script file name as needed*
 
+	Base install - CDT required
+	http://eclipse.org/downloads/packages/release/Kepler/SR2.
+	Place tarball in /home/setup/ for 'ide' script. Edit ide script file name as needed
 
+**************************************************************************************
 ---------------
 ***How to Upgrade Eclipse on the Development VM***
----------------
-***Thanks Valkyra***
+
+	***Thanks Valkyra***
 
 Close Eclipse. Download http://www.eclipse.org/downloads/dow...PACKAGENAME.tar.gz to ~/Downloads
 
@@ -179,4 +179,3 @@ Once added, select the project again and right click, then index/rebuild (may ta
 
 Close Eclipse and then re-open it, Carry on working as normal but with the newer version
 
-=====================================
