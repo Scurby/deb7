@@ -1,0 +1,94 @@
+#!/bin/bash
+#
+
+
+##############################################################################
+# Common functions and setup
+##############################################################################
+yorn() {
+  echo -n -e "$@ Y\b"
+  read yorn
+  case $yorn in
+    [Nn]* ) return 1;;
+  esac
+  return 0
+}
+
+nory() {
+  echo -n -e "$@ N\b"
+  read yorn
+  case $yorn in
+    [Yy]* ) return 0;;
+  esac
+  return 1
+}
+
+logmsg() {
+  echo "${tc_smso}**${tc_rmso} $*"
+  logger -t start "$*"
+}
+
+logstep() {
+  let "step=$step + 1"
+  echo ${tc_smso}$(head -c $(tput cols) < /dev/zero | tr '\0' '*')${tc_rmso}
+  echo "${tc_smso}**${tc_rmso} STEP $step >> $*"
+  logger -t start "STEP $step >> $*"
+}
+
+step=0
+tc_smso=$(tput smso)
+tc_rmso=$(tput rmso)
+
+
+####################
+# Clone files/folders from github
+####################
+logstep "Download setup files"
+
+if yorn "Would you like to download the setup files now??"; then
+   logmsg " Cloning repository... "
+   git clone https://github.com/Scurby/deb7.git
+   else
+     exit 0
+fi
+
+####################
+# Copy to correct locations..
+####################
+logstep "Install files"
+if yorn "Would you like to Copy all folders/files to the /home/ folder now??"; then
+   logmsg " Copying.... "
+     cp -i /home/swgemu/deb7/bin/* /home/swgemu/bin/
+     cp -i /home/swgemu/deb7/setup/* /home/swgemu/setup/
+     cp -i /home/swgemu/deb7/run/* /home/swgemu/run/
+   else
+     exit 0
+fi
+
+####################
+# Set as executable..
+####################
+logstep "Set file perms"
+
+if yorn "Would you like to set file permissions now??"; then
+  for i in ack admin bar build cleanup_for_publish createdb e eclipse first freeze ide installed latest myip myip_w openfile options perms run_dev start thaw updateip
+    do
+      logmsg " Setting file permissions to executable for ${i} ... "
+      chmod -v +x /home/swgemu/binT/${i}
+    done
+  else
+    logmsg  " Edit this script as desired. "
+  exit 0
+fi
+
+####################
+#Restart
+####################
+logstep "Restart"
+
+if yorn "Would you like to restart now??"; then
+    sudo /sbin/reboot
+  else
+    exit 0
+fi
+exit 0

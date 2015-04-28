@@ -387,22 +387,18 @@ then
     sudo service mysql start
 fi
 
-logmsg "Enter user password"
-if mysql -p -NB -e 'show databases'|grep swgemu > /dev/null 2>&1; then
+if mysql -p123456 -NB -e 'show databases'|grep swgemu > /dev/null 2>&1; then
   logmsg "swgemu database already exists"
   :
 else
   logmsg "Enter root password"
-  createdb swgemu swgemu l      # See createdb script in /home/bin
+  createdb swgemu swgemu 123456      # See createdb script in /home/bin
   logmsg "Restore blank swgemu database to mysql"
-  logmsg "Enter user password"
-  mysql -p -e source -e ~/workspace/Core3/MMOCoreORB/sql/swgemu.sql;
-  logmsg "Enter user password"
+  mysql -p123456 -e source -e ~/workspace/Core3/MMOCoreORB/sql/swgemu.sql;
   for sql in ~/workspace/Core3/MMOCoreORB/sql/updates/*.sql
   do
     logmsg "Runing mysql update: $sql"
-    mysql -p swgemu -e source -e $sql
-    logmsg "Enter user password"
+    mysql -p123456 swgemu -e source -e $sql
   done
 fi
 
