@@ -2,7 +2,8 @@
 SWGEmu Development Environment setup for Debian 7 OS
 
 VirtualBox, VMWare, or native install. Edit as needed.
-	VirtualBox - https://www.virtualbox.org/wiki/Downloads.
+https://www.virtualbox.org/wiki/Downloads
+https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/7_0
 	
 I used:
 	
@@ -61,7 +62,7 @@ Run Updates
 	
 =====================
 # Import scripts  
-	**do this in perms?**
+	git clone
 
 Copy '/folder/files' into home folder
 
