@@ -7,4 +7,4 @@
 # Created: Apr 26 2015
 #
 
-mysql -p -e UPDATE `swgemu`.`accounts` SET `admin_level`=15 WHERE `account_id`='1';
+mysql -p123456 -e UPDATE `swgemu`.`accounts` SET `admin_level`=15 WHERE `account_id`='1';
