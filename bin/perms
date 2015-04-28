@@ -52,12 +52,10 @@ fi
 #git clone https://github.com/Scurby/deb7.git
 ####################
 logstep "Download files"
+
 if yorn "Would you like to download the setup files now??"; then
    logmsg " Copy all folders/files to the /home/ folder "
-#   $BROWSER "https://www.dropbox.com/sh/441mev85h36duzb/AABqxQkv4VQrcCxI-LN09C2Pa?dl=0" > /tmp/browser.out 2>&1
-#wget -i "https://www.dropbox.com/sh/441mev85h36duzb/AABqxQkv4VQrcCxI-LN09C2Pa?dl=0"
-
-git clone https://github.com/Scurby/deb7.git
+   git clone https://github.com/Scurby/deb7.git
     sleep 2
 fi
 
@@ -86,8 +84,11 @@ fi
 #Restart
 ####################
 logstep "Restart"
+
 if yorn "Would you like to restart now??"; then
     sudo /sbin/reboot
   else
     exit 0
 fi
+
+

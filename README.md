@@ -60,27 +60,40 @@ Run Updates
 	
 =====================
 # Import scripts  
+=====================
+
 	git clone https://github.com/Scurby/deb7.git
+
+***********
 
 Copy all files/folders into home folder
 
-	/home/bin/ - place all shell scripts here - set as read/write/executable
+/bin/ - place all shell scripts here - set as read/write/executable
 	TODO - Be sure that is executable:
-	chmod +x /path/to/script - # perms
+	chmod +x /path/to/script
 
-	/home/run/conf/ - place run_gdb in /home/run/
-	- /conf/ should be empty.
+/run/ - place run_gdb here
 
-	/home/setup - place eclipse tarball and Egit-prop tarball here
+/run/conf/ - should be empty.
 
+/home/setup - place eclipse tarball and Egit-prop tarball here
+
+Code:
+
+	cp -i /home/swgemu/deb7/bin/* /home/swgemu/bin/
+	cp -i /home/swgemu/deb7/setup/* /home/swgemu/setup/
+	cp -i /home/swgemu/deb7/run/* /home/swgemu/run/
+	chmod -v +x /home/swgemu/bin/*
+
+=====================
 # Restart
-
-	*TODO force restart???*
+=====================
 
 RESTART!!!
+
 =====================
 # Run setup scripts
-
+=====================
 The following shell scripts can be run from the command line. They are numbered in the order I use them.
 
 1. options - Installs Optional packages
@@ -91,6 +104,7 @@ The following shell scripts can be run from the command line. They are numbered 
 	- chromium 
 	- quassel
 	- dropbox
+	- first;
         
 2. first - Installs required packages and programs
 
@@ -98,6 +112,7 @@ The following shell scripts can be run from the command line. They are numbered 
 	- libncurses5-dev, libneon27, libaprutil1-dev, libtool
 	- openjdk-6-jre, openjdk-6-jre-headless, libgtest-dev, screen
 	- Lua-5.1 - Berkely DB 5.0 - MySQL Server and Workbench
+	- start;
 
 3. start - Initial setup of development environment
 
@@ -142,13 +157,17 @@ thaw - allow server to continue from previous state each time you run it
 
 installed - Package and version check sent to /home/*
 
-***************
+**************************************************************************************
+*FIXME* *FIXME* *FIXME*
+
 openfile {filename} - open file in eclipse *FIXME*
 
 eclipse - install eclipse, import project and set git properties. *FIXME*
 	(Requires Egit-properties.tar.gz in /home/setup/
+
 **************************************************************************************
 **************************************************************************************
+
 ===============
 # Eclipse- Not complete
 http://eclipse.org/downloads/
