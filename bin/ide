@@ -1,15 +1,13 @@
 #!/bin/bash
 #
-# start - Initial setup of development environment
+# start - Initial setup of IDE
 #
-# Author: Lord Kator <lordkator@swgemu.com>
+# Author: Scurby <scurby@swgemu.com>
 #
-# Created: Sun Apr 21 16:40:55 UTC 2013
+# Created: Mon Apr 28 12015
 #
-# Edited Mon Mar 4 2015 by Scurby <scurby@swgemu.com>
-#
-# Copy of 'getstarted' Edited for stand alone environments and various vm builds.
 # 
+# FIXME
 
 logger -t start "** START **"
 
