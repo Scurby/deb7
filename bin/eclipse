@@ -1,7 +1,7 @@
 #!/bin/bash
-#nohup ~/eclipse/eclipse $@ > ~/tmp/nohup.out 2>&1 &
 #
-# TEST
+#
+# FIXME
 
 logger -t eclipse "** eclipse **"
 
