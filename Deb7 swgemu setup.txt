@@ -1,10 +1,8 @@
 https://github.com/Scurby/deb7
 
-Headless dropbox install
-cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-~/.dropbox-dist/dropboxd
+VirtualBox, VMWare, or native install. Edit configuration as needed. 
+I used:
 
-﻿VirtualBox, VMWare, or native install. Edit configuration as needed. I used:
 	VirtualBox
 	8g mem
 	32g virtual drive
