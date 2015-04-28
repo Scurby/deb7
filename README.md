@@ -76,12 +76,18 @@ Copy all files/folders into home folder
 
 /run/conf/ - should be empty.
 
-/home/setup - place eclipse tarball and Egit-prop tarball here
+/setup/ - eclipse tarball and Egit-prop tarball here
 
 Code:
 
+	mkdir bin
 	cp -i /home/swgemu/deb7/bin/* /home/swgemu/bin/
+	mkdir setup
 	cp -i /home/swgemu/deb7/setup/* /home/swgemu/setup/
+	mkdir run
+	cd run
+	mkdir conf
+	cd
 	cp -i /home/swgemu/deb7/run/* /home/swgemu/run/
 	chmod -v +x /home/swgemu/bin/*
 
