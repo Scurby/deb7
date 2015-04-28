@@ -2,11 +2,12 @@
 SWGEmu Development Environment setup for Debian 7 OS
 
 VirtualBox, VMWare, or native install. Edit as needed.
-https://www.virtualbox.org/wiki/Downloads
-https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/7_0
+
+	https://www.virtualbox.org/wiki/Downloads
+	https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/7_0
 	
 I used:
-	
+
 	8g mem
 	32g virtual drive
 	max cores
@@ -21,8 +22,6 @@ https://www.debian.org/distrib/
 	username=swgemu  
 	password=123456
 	root pw=12345678
-
-*TODO - make configurable username and pass - $USER and $PWD*
 ****************
 Predefined software selections - Default selection
 
@@ -145,7 +144,7 @@ thaw - allow server to continue from previous state each time you run it
 
 installed - Package and version check sent to /home/*
 
-
+***************
 openfile {filename} - open file in eclipse *FIXME*
 
 eclipse - install eclipse, import project and set git properties. *FIXME*
