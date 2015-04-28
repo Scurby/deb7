@@ -7,11 +7,11 @@
 # Date: Tuesday, April 28 2015
 
 git clone https://github.com/Scurby/deb7.git
-
+mkdir bin
 cp -i /home/swgemu/deb7/bin/* /home/swgemu/bin/
-
+mkdir setup
 cp -i /home/swgemu/deb7/setup/* /home/swgemu/setup/
-
+mkdir run
 cp -i /home/swgemu/deb7/run/* /home/swgemu/run/
 
 chmod -v +x /home/swgemu/bin/*
