@@ -90,7 +90,7 @@ The following shell scripts can be run from the command line. They are numbered 
 	- vim 
 	- chromium 
 	- quassel
-	- TODO fix dropbox install
+	- dropbox
         
 2. first - Installs required packages and programs
 
@@ -116,7 +116,6 @@ The following shell scripts can be run from the command line. They are numbered 
 
 4. build - simple build script
 
-	- build always does make -k build
 	- build config does 'make config' and 'make clean'
 	- build clean does 'make clean'
 
@@ -148,26 +147,7 @@ openfile {filename} - open file in eclipse *FIXME*
 
 eclipse - install eclipse, import project and set git properties. *FIXME*
 	(Requires Egit-properties.tar.gz in /home/setup/
-*******************************************************************************************
--------
-Dropbox 
--------
-Option A. Installing Dropbox from source
-
-* TODO Fix this and place in 'options' script *
-Download the latest installer package from https://linux.dropbox.com/packages/
-Extract the tarball like so:
-tar xjf ./nautilus-dropbox-1.6.1.tar.bz2
-In most distributions, the following commands should do the rest:
-cd ./nautilus-dropbox-1.6.1; ./configure; make; make install;
-
-Option B. Dropbox Headless Install via command line
-
-To install, run the following command in your Linux terminal.
-cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-To start deamon in terminal
-~/.dropbox-dist/dropboxd
-
+**************************************************************************************
 **************************************************************************************
 ===============
 # Eclipse- Not complete
