@@ -62,9 +62,9 @@ Run Updates
 	
 =====================
 # Import scripts  
-	git clone
+	git clone https://github.com/Scurby/deb7.git
 
-Copy '/folder/files' into home folder
+Copy all files/folders into home folder
 
 	/home/bin/ - place all shell scripts here - set as read/write/executable
 	TODO - Be sure that is executable:
