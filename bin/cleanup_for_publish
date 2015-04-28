@@ -42,8 +42,8 @@ rm -f /tmp/issue.$$
 sudo /root/cleanup_for_publish 4bc95050e236c01a73daec4cbef2dcdb $VERSION
 
 cat << ! | sudo /usr/sbin/chpasswd
-root:1234
-swgemu:l
+root:12345678
+swgemu:123456
 !
 
 cat << ! > /home/swgemu/00README
