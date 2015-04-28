@@ -63,8 +63,14 @@ fi
 logstep "Install files"
 if yorn "Would you like to Copy all folders/files to the /home/ folder now??"; then
    logmsg " Copying.... "
+     mkdir bin
      cp -i /home/swgemu/deb7/bin/* /home/swgemu/bin/
+     mkdir setup
      cp -i /home/swgemu/deb7/setup/* /home/swgemu/setup/
+     mkdir run
+     cd run
+     mkdir conf
+     cd
      cp -i /home/swgemu/deb7/run/* /home/swgemu/run/
    else
    exit 0
