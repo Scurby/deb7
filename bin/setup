@@ -1,5 +1,10 @@
 #!/bin/bash
 #
+# setup - Downloads and installs these scripts
+#
+# Created by: Scurby <scurby@swgemu.com>
+#
+# Date: Tuesday, April 28 2015
 
 
 ##############################################################################
