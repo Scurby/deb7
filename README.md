@@ -1,9 +1,10 @@
 # deb7
 SWGEmu Development Environment setup for Debian 7 OS
 
-﻿VirtualBox, VMWare, or native install. Edit as needed. 
-	VirtualBox - https://www.virtualbox.org/wiki/Downloads
-	I used:
+VirtualBox, VMWare, or native install. Edit as needed.
+	VirtualBox - https://www.virtualbox.org/wiki/Downloads.
+	
+I used:
 	
 	8g mem
 	32g virtual drive
