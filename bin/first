@@ -6,9 +6,6 @@
 #
 # Created: Mar 4 2015
 #
-# TODO - Dropbox
-#cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-#~/.dropbox-dist/dropboxd
 
 logger -t first "** FIRST **"
 
@@ -120,7 +117,7 @@ bdb_pkg=/usr/local/BerkeleyDB.5.0/include/db.h
 
 if [ -f $bdb_pkg ]; then
   logmsg "Ok looks like you have installed Berkely DB-5.0!"
-else
+ else
   while ! yorn " Would you like to install or restore Berkely DB from http://download.oracle.com/berkeley-db/db-5.0.32.NC.tar.gz now?? "
     do
       echo "You need to do it before you can build the server. (cntl+c to exit)"
