@@ -17,12 +17,12 @@ else
   exit 1
 fi
 
-CUR_IP=$(mysql -pl swgemu -BNe 'select address from galaxy limit 1')
+CUR_IP=$(mysql -p123456 swgemu -BNe 'select address from galaxy limit 1')
 
 echo "Current galaxy IP: $CUR_IP"
 
 if [ "X$IP" == "X$CUR_IP" ]; then
-  echo "** no change needed **"
+  echo "** No change needed! **"
   exit 0
 fi
 
@@ -30,8 +30,8 @@ echo
 
 SQL="update galaxy set address='$IP';"
 
-mysql -pl swgemu -v -e "$SQL"
+mysql -p123456 swgemu -v -e "$SQL"
 
-NEW_IP=$(mysql -pl swgemu -BNe 'select address from galaxy limit 1')
+NEW_IP=$(mysql -p123456 swgemu -BNe 'select address from galaxy limit 1')
 
 echo "New galaxy IP    : $NEW_IP"
