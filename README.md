@@ -78,6 +78,8 @@ Copy all files/folders into home folder
 
 /setup/ - eclipse tarball and Egit-prop tarball here
 
+***********
+
 Code:
 
 	mkdir bin
@@ -94,7 +96,6 @@ Code:
 =====================
 # Restart
 =====================
-
 RESTART!!!
 
 =====================

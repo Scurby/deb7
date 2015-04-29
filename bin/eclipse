@@ -65,29 +65,28 @@ eclipse_base=~/setup/eclipse-cpp-kepler-SR2-linux-gtk-x86_64.tar.gz
   logmsg " https://eclipse.org/downloads/packages/eclipse-ide-cc-developers/keplersr2 "
   logmsg " Download eclipse tarbal to /home/setup "
   logmsg " Edit eclipse_base file name accordingly on line 59 of /home/bin/eclipse "
-  if [ -d ~/eclipsex ]; then
+  if [ -d ~/eclipse ]; then
   logmsg "Looks like eclipse is already installed"
   else
-   if [ -f $eclipse_base ]; then
-    logmsg "Missing $eclipse_base did you remove it?"
-
-   fi
     logmsg "Restoring basic eclipse install from $eclipse_base"
-    tar xfz $eclipse_base
+    sudo apt-get update
+    sudo apt-get install eclipse
+    sudo apt-get install eclipse-cdt
+    sudo apt-get install eclipse-egit
     logmsg "Import eclipse project settings (might take a few minutes)"
-    for i in Core3/MMOCoreORB PublicEngine/MMOEngine
-    do
-      if [ -f ~/workspace/$i/.project ]; then
-        logmsg "Importing $i"
-        ~/eclipse/eclipse \
-	  -nosplash \
-	  -data ~/workspace \
-	  -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
-	  -import ~/workspace/$i
-      else
-        logmsg "Missing project file for $i?"
-      fi
+      for i in Core3/MMOCoreORB PublicEngine/MMOEngine
+      do
+        if [ -f ~/workspace/$i/.project ]; then
+          logmsg "Importing $i"
+          ~/eclipse/eclipse \
+	    -nosplash \
+	    -data ~/workspace \
+	    -application org.eclipse.cdt.managedbuilder.core.headlessbuild \
+	    -import ~/workspace/$i
+        else
+          logmsg "Missing project file for $i?"
     done
+  fi
 
     for dir in ~/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/*
     do
