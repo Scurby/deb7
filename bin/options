@@ -39,6 +39,7 @@ tc_rmso=$(tput rmso)
 #################
 # Optional packages
 # xclip terminator vim chromium quassel
+# TODO add more options. docs, git-review
 #################
 logstep "Optional packages."
 
