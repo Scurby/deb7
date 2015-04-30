@@ -73,6 +73,7 @@ eclipse_base=~/setup/eclipse-cpp-kepler-SR2-linux-gtk-x86_64.tar.gz
     sudo apt-get install eclipse
     sudo apt-get install eclipse-cdt
     sudo apt-get install eclipse-egit
+    sudo apt-get install eclipse-ldt  # TODO try it..
     logmsg "Import eclipse project settings (might take a few minutes)"
       for i in Core3/MMOCoreORB PublicEngine/MMOEngine
       do
@@ -98,16 +99,15 @@ eclipse_base=~/setup/eclipse-cpp-kepler-SR2-linux-gtk-x86_64.tar.gz
     logmsg "Eclipse setup and import complete"
 fi
 exit 0
+#//
+Inside an existing Eclipse installation
+Add the following repository: http://download.eclipse.org/koneki/releases/stable from the "Help > Install New Software..." menu of your Eclipse 3.7+ workbench, and then check the "Lua Development Tools" feature.
+Should you want to install a different version than the latest stable one, check on the wiki the other update repositories available.
 
-##############################################################################
-# QT Creator setup
-# TODO
-#cd setup
-# wget http://download.qt.io/official_releases/online_installers/qt-opensource-linux-x64-online.run
-#set as executable and open
-#
-# official_releases LINK -http://download.qt.io/official_releases/qt/5.4/5.4.1/qt-opensource-linux-x64-5.4.1.run.mirrorlist
-##############################################################################
+Alternatively, you can install LDT using the Eclipse Marketplace.
+Just drag and drop the following button into your running Eclipse workbench, and the installation will begin!
+#//
+
 
 ##############################################################################
 # Setup eclipse if we have the setup file
