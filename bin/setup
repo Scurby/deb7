@@ -51,7 +51,8 @@ tc_rmso=$(tput rmso)
 logstep "Download setup files"
 
 if yorn "Would you like to download the setup files now??"; then
-   logmsg " Cloning repository... "
+   logmsg " Installing git and Cloning repository... "
+   sudo apt-get install git
    git clone https://github.com/Scurby/deb7.git
    else
    exit 0

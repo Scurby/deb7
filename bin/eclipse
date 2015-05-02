@@ -73,7 +73,6 @@ eclipse_base=~/setup/eclipse-cpp-kepler-SR2-linux-gtk-x86_64.tar.gz
     sudo apt-get install eclipse
     sudo apt-get install eclipse-cdt
     sudo apt-get install eclipse-egit
-    sudo apt-get install eclipse-ldt  # TODO try it..
     logmsg "Import eclipse project settings (might take a few minutes)"
       for i in Core3/MMOCoreORB PublicEngine/MMOEngine
       do
