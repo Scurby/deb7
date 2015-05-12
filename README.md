@@ -62,6 +62,7 @@ Run Updates
 # Import scripts  
 =====================
 
+	sudo apt-get install git
 	git clone https://github.com/Scurby/deb7.git
 
 ***********
@@ -87,9 +88,6 @@ Code:
 	mkdir setup
 	cp -i /home/swgemu/deb7/setup/* /home/swgemu/setup/
 	mkdir run
-	cd run
-	mkdir conf
-	cd
 	cp -i /home/swgemu/deb7/run/* /home/swgemu/run/
 	chmod -v +x /home/swgemu/bin/*
 
@@ -110,7 +108,6 @@ The following shell scripts can be run from the command line. They are numbered 
 	- vim 
 	- chromium 
 	- quassel
-	- dropbox
 	- first;
         
 2. first - Installs required packages and programs
@@ -154,7 +151,7 @@ ack - Nice source grep tool (try: cd ~/workspace/MMOCoreORB/src; ack PlanetManag
 
 myip -  display the ip of the VM and login port for quick configuration of the windows client
 
-updateip - Get ip address of local eth0 and update galaxy table as needed
+updateip - Get ip address of local eth0 and update galaxy table in MySQL as needed
 
 latest - do a quick git-stash, git-pull, and git-stash-apply so you can get to the latest code w/o loosing local work
 
