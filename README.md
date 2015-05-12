@@ -53,17 +53,14 @@ We give a user sudo privileges by copying the line beginning with "%sudo" and pa
 	%newuser   ALL=(ALL:ALL) ALL
 	
 We can now save the file and close it. By default, you can do that by typing Ctrl-X and then typing "Y" and pressing "Enter".
-****************
-Run Updates
-
-	sudo apt-get update
 	
 =====================
 # Import scripts  
 =====================
+Copy and paste this into a terminal to Download and install these scripts. System will reboot. (This is the 'bang' script.)
 
-	sudo apt-get install git
-	git clone https://github.com/Scurby/deb7.git
+	cd && sudo apt-get update && sudo apt-get install -y -q git && git clone https://github.com/Scurby/deb7.git && mkdir bin && cp -i /home/swgemu/deb7/bin/* /home/swgemu/bin/ && mkdir setup && cp -i /home/swgemu/deb7/setup/* /home/swgemu/setup/ && mkdir run && cp -r /home/swgemu/deb7/run/* /home/swgemu/run/ && chmod -v +x /home/swgemu/bin/* && sudo /sbin/reboot
+
 
 ***********
 
@@ -84,11 +81,11 @@ Copy all files/folders into home folder
 Code:
 
 	mkdir bin
-	cp -i /home/swgemu/deb7/bin/* /home/swgemu/bin/
+	cp -r /home/swgemu/deb7/bin/* /home/swgemu/bin/
 	mkdir setup
-	cp -i /home/swgemu/deb7/setup/* /home/swgemu/setup/
+	cp -r /home/swgemu/deb7/setup/* /home/swgemu/setup/
 	mkdir run
-	cp -i /home/swgemu/deb7/run/* /home/swgemu/run/
+	cp -r /home/swgemu/deb7/run/* /home/swgemu/run/
 	chmod -v +x /home/swgemu/bin/*
 
 =====================
